@@ -10,6 +10,12 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Mac bullshit
+*.DS_Store
+
+# Plugins
+/[Aa]ssets/[Pp]lugins/
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/

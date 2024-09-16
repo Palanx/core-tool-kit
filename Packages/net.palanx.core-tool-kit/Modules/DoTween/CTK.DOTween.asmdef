@@ -1,0 +1,16 @@
+{
+    "name": "DoTweenTools",
+    "rootNamespace": "",
+    "references": [
+        "GUID:3d4e947c795734800b7bb9f1c980781e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
