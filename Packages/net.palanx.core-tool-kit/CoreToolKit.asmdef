@@ -1,12 +1,10 @@
 {
-    "name": "DoTweenTools",
-    "rootNamespace": "",
-    "references": [
-        "GUID:3d4e947c795734800b7bb9f1c980781e"
-    ],
+    "name": "CoreToolKit",
+    "rootNamespace": "CoreToolKit",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
+    "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,

@@ -10,6 +10,9 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Jetbrains
+.idea/
+
 # Mac bullshit
 *.DS_Store
 
