@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace CoreToolKit.Tests.EditMode.UnityEngine.Extensions
 {
-    public class VectorExtensionsTest
+    public class VectorExtensionsTests
     {
         #region Vector2
         [Test]
