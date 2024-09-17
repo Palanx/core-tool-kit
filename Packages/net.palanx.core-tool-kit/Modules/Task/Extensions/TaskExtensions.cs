@@ -3,6 +3,8 @@ using ILogger = CoreToolKit.Logger.ILogger;
 
 namespace CoreToolKit.Task.Extensions
 {
+  using System.Threading.Tasks;
+  
   /// <summary>
   /// Extension methods for <see cref="Task"/> type.
   /// </summary>
@@ -14,7 +16,7 @@ namespace CoreToolKit.Task.Extensions
     /// </summary>
     /// <param name="task">Instance.</param>
     /// <param name="log">Used to log the possible exceptions.</param>
-    public static async void Forget( this System.Threading.Tasks.Task task, ILogger log )
+    public static async void Forget( this Task task, ILogger log )
     {
       try
       {

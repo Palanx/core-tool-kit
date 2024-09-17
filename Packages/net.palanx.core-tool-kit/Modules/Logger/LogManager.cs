@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace CoreToolKit.Logger
@@ -27,5 +28,9 @@ namespace CoreToolKit.Logger
     /// <inheritdoc cref="ILogManager.GetLogger{T}"/>
     public ILogger GetLogger<T>() where T : notnull =>
       new Logger( typeof( T ), LogHandler, FilterLogType );
+    
+    /// <inheritdoc cref="ILogManager.GetLogger"/>
+    public ILogger GetLogger( Type type ) =>
+      new Logger( type, LogHandler, FilterLogType );
   }
 }
