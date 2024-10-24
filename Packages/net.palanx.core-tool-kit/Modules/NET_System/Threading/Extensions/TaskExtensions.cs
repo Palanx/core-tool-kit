@@ -4,7 +4,7 @@ using ILogger = CoreToolKit.Logger.ILogger;
 namespace CoreToolKit.Task.Extensions
 {
   using System.Threading.Tasks;
-  
+
   /// <summary>
   /// Extension methods for <see cref="Task"/> type.
   /// </summary>
@@ -27,5 +27,7 @@ namespace CoreToolKit.Task.Extensions
         log?.Exception( $"Exception thrown while executing Task ID {task.Id}.", ex );
       }
     }
+
+    // TODO: Create a timer method to log an error if the task isn't completed in X amount of time.
   }
 }
