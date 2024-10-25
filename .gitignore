@@ -9,9 +9,13 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
+/[Aa]ssets/TextMesh Pro*
 
 # Jetbrains
 .idea/
+
+# Visual Studio Code
+.vscode/
 
 # Mac bullshit
 *.DS_Store
