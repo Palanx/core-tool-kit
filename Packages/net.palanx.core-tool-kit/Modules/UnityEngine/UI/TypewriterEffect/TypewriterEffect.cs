@@ -41,7 +41,8 @@ namespace CoreToolKit.UI.TypewriterEffect
 
     private void Awake()
     {
-      Guard.State.IsNotNull( _targetLabel, $"Missing reference to {nameof( _targetLabel )}." );
+      // TODO: Implement Guards.
+      //Guard.State.IsNotNull( _targetLabel, $"Missing reference to {nameof( _targetLabel )}." );
 
       // The target text could contain a placeholder text, so the state is cleared at the beginning.
       ClearState();

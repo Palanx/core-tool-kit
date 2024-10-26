@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using ILogger = CoreToolKit.Logger.ILogger;
 
-namespace CoreToolKit.Tests.EditMode.Task.Extensions
+namespace CoreToolKit.Tests.EditMode.NET_System.Threading.Extensions
 {
   using System.Threading.Tasks;
 

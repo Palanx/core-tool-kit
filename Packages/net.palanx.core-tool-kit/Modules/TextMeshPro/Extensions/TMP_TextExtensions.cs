@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace CoreToolKit.TextMeshPro.Extensions
 {
-{
   public static class TMP_TextExtensions
   {
     /// <summary>
     /// Try to find a <see cref="TMP_LinkInfo"/> in the ScreenPoint provided in this <see cref="TMP_Text"/>.
     /// </summary>
+    /// <param name="text">Instance.</param>
     /// <param name="mousePosition">ScreenPoint in the text where to extract the <see cref="TMP_LinkInfo"/>.</param>
     /// <param name="linkInfo"><see cref="TMP_LinkInfo"/> found in the ScreenPoint.</param>
     /// <returns>If was possible to get the <see cref="TMP_LinkInfo"/>.</returns>
@@ -17,6 +17,7 @@ namespace CoreToolKit.TextMeshPro.Extensions
     /// <summary>
     /// Try to find a <see cref="TMP_LinkInfo"/> in the ScreenPoint provided in this <see cref="TMP_Text"/>.
     /// </summary>
+    /// <param name="text">Instance.</param>
     /// <param name="mousePosition">ScreenPoint in the text where to extract the <see cref="TMP_LinkInfo"/>.</param>
     /// <param name="camera">Camera used to transform ScreenPoint to <see cref="Ray"/>.</param>
     /// <param name="linkInfo"><see cref="TMP_LinkInfo"/> found in the ScreenPoint.</param>
@@ -38,6 +39,7 @@ namespace CoreToolKit.TextMeshPro.Extensions
     /// <summary>
     /// Get the world center position of the <see cref="TMP_LinkInfo"/> provided in this <see cref="TMP_Text"/>.
     /// </summary>
+    /// <param name="text">Instance</param>
     /// <param name="linkInfo">Used to calculate the world center position.</param>
     /// <returns><see cref="TMP_LinkInfo"/> world center position.</returns>
     public static Vector3 GetLinkInfoWorldCenterPosition( this TMP_Text text, TMP_LinkInfo linkInfo )
