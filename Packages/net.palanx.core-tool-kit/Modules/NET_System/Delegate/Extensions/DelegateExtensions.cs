@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using CoreToolKit.Logger;
 
-namespace CoreToolKit.NET_System.Linq.Extensions
+namespace CoreToolKit.NET_System.Delegate.Extensions
 {
   /// <summary>
   /// Method extensions for delegates.
@@ -72,9 +72,9 @@ namespace CoreToolKit.NET_System.Linq.Extensions
     /// <param name="log">Used to log the possible exceptions.</param>
     /// <typeparam name="TDelegate"></typeparam>
     public static void SafeInvoke<TDelegate>( this TDelegate @delegate, Action<TDelegate> delegateInvoker, ILogger log  )
-      where TDelegate : Delegate
+      where TDelegate : System.Delegate
     {
-      if ( @delegate == null )
+      if ( @delegate == null || delegateInvoker == null )
       {
         return;
       }
