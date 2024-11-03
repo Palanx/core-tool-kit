@@ -30,7 +30,6 @@ namespace CoreToolKit.UI.Utils
           return false;
         }
 
-        // N0 = Number with commas, 0 decimals, and rounded
         formattedValue = FormatDoubleValueAsLong( doubleResult, cultureInfo );
         return true;
       }

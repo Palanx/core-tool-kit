@@ -1,4 +1,4 @@
-﻿namespace CoreToolKit.Tests.EditMode.UnityEngine.Extensions
+﻿namespace CoreToolKit.Tests.PlayMode.UnityEngine.Extensions
 {
   public class RectTransformExtensionsTest
   {

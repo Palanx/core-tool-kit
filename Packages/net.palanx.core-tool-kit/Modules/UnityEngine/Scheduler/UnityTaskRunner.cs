@@ -93,7 +93,7 @@ namespace CoreToolKit.UnityEngine.Scheduler
     /// <param name="action">The action to invoke or schedule its async execution.</param>
     public static async Task EnsureOnMainThread( Action action )
     {
-      if ( Environment.CurrentManagedThreadId == MainThreadId )
+      if ( IsMainThread() )
       {
         action?.Invoke();
       }
@@ -102,5 +102,11 @@ namespace CoreToolKit.UnityEngine.Scheduler
         await Run( action );
       }
     }
+
+    /// <summary>
+    /// Validate if the thread where this method was called is the Main Thread.
+    /// </summary>
+    /// <returns>If the thread where this method was called is the Main Thread or not.</returns>
+    public static bool IsMainThread() => Environment.CurrentManagedThreadId == MainThreadId;
   }
 }
