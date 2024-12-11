@@ -9,18 +9,12 @@ The **Core Tool Kit** is a versatile and modular toolset designed to enhance the
 
 ## Table of Contents
 
-- [Core Tool Kit](#core-tool-kit)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-    - [Clone the Repository](#clone-the-repository)
-    - [Add as a Submodule](#add-as-a-submodule)
-    - [Package Manager](#package-manager)
-  - [Features](#features)
-  - [Usage](#usage)
-    - [Example](#example)
-  - [Documentation](#documentation)
-  - [Contributing](#contributing)
-  - [License](#license)
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
