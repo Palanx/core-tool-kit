@@ -7,36 +7,29 @@
 
 The **Core Tool Kit** is a versatile and modular toolset designed to enhance the functionality of your projects by providing a collection of utilities, extensions, and tools. It is developed with a focus on usability, efficiency, and ease of integration into various projects.
 
+
+
 ## Table of Contents
 
-- [Installation](#installation)
-- [Features](#features)
-- [Usage](#usage)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [License](#license)
+- [Core Tool Kit](#core-tool-kit)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+    - [Unity Package Manager](#unity-package-manager)
+  - [Features](#features)
+  - [Usage](#usage)
+    - [Example](#example)
+  - [Documentation](#documentation)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Installation
 
-You can install the Core Tool Kit using the following methods:
+### Unity Package Manager
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/Palanx/core-tool-kit.git
+Add the package by Git URL:
 ```
-
-### Add as a Submodule
-
-If you are integrating this into an existing repository:
-
-```bash
-git submodule add https://github.com/Palanx/core-tool-kit.git core-tool-kit
+https://github.com/Palanx/core-tool-kit.git?path=/Packages/net.palanx.core-tool-kit
 ```
-
-### Package Manager
-
-> (If published on a package manager like npm, NuGet, or Unity Package Manager, include the installation instructions here)
 
 ## Features
 
