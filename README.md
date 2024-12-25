@@ -20,6 +20,7 @@ scenarios.
   * [Import the Package](#import-the-package)
     * [Unity Package Manager](#unity-package-manager)
       * [Current `main` version](#current-main-version)
+      * [Tags](#tags)
       * [Releases](#releases)
     * [Package Dependencies](#package-dependencies)
       * [TextMeshPro](#textmeshpro)
@@ -44,9 +45,34 @@ To import the current version from `main` branch, add the package using the next
 https://github.com/Palanx/core-tool-kit.git?path=/Packages/net.palanx.core-tool-kit
 ```
 
+#### Tags
+
+To import a specific [Tag](https://github.com/Palanx/core-tool-kit/tags), add the package using the next Git URL:
+```
+https://github.com/Palanx/core-tool-kit.git?path=/Packages/net.palanx.core-tool-kit#{version-tag}
+```
+
 #### Releases
 
-For now there aren't release versions.
+Import a Release of this package as an *embedded* package is a good idea when you want to:
+- Edit the package's contents directly inside the Unity project, which is helpful for iterative development or when
+debugging package code.
+- Include the package in the project folder, so it can be shared with the team, added to version control, or
+archived without worrying about external dependencies.
+- Become the package part of the project's version control. This ensures that everyone working on the
+project uses the exact same version of the package.
+
+but, you should know that it will always be better to create a fork of the package to be able to modify it because:
+- Without a central repository, managing versions and distributing updates can become cumbersome.
+- The package is editable within the project, there’s a risk of accidental changes that may break its functionality.
+- The package code becomes tightly coupled with the project, which may not be ideal if you plan to reuse the package in multiple projects.
+- If the package is used in multiple projects, you'll need to manually update the package in each project when changes are made.
+
+To import a specific [Release](https://github.com/Palanx/core-tool-kit/releases):
+1. Download the `net.palanx.core-tool-kit-{version-tag}.zip` file of the release version tag that you want to include.
+2. Decompress the file and move the `net.palanx.core-tool-kit-{version-tag}` folder into the `\Packages\` folder.
+3. Unity will automatically recognize the *embedded* package.
+
 
 ### Package Dependencies
 
