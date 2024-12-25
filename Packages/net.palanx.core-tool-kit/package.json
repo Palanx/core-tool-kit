@@ -1,13 +1,13 @@
 {
     "name": "net.palanx.core-tool-kit",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "displayName": "CoreToolKit",
     "description": "ToolKit with all kind of Unity utils, extensions, handlers, tools and more.",
     "unity": "2021.3",
     "unityRelease": "43f1",
-    "documentationUrl": "https://example.com/",
-    "changelogUrl": "https://example.com/changelog.html",
-    "licensesUrl": "https://raw.githubusercontent.com/Palanx/core-tool-kit/refs/heads/master/LICENSE",
+    "documentationUrl": "",
+    "changelogUrl": "https://raw.githubusercontent.com/Palanx/core-tool-kit/refs/heads/master/Packages/net.palanx.core-tool-kit/CHANGELOG.md",
+    "licensesUrl": "https://raw.githubusercontent.com/Palanx/core-tool-kit/refs/heads/master/Packages/net.palanx.core-tool-kit/LICENSE",
     "dependencies": {
    },
    "keywords": [
@@ -20,6 +20,6 @@
     "author": {
       "name": "Palanx",
       "email": "palanx-px@proton.me",
-      "url": "https://www.unity3d.com"
+      "url": ""
     }
   }

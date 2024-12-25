@@ -5,66 +5,136 @@
 ![Stars](https://img.shields.io/github/stars/Palanx/core-tool-kit)
 ![Forks](https://img.shields.io/github/forks/Palanx/core-tool-kit)
 
-The **Core Tool Kit** is a versatile and modular toolset designed to enhance the functionality of your projects by providing a collection of utilities, extensions, and tools. It is developed with a focus on usability, efficiency, and ease of integration into various projects.
+The Core Tool Kit is a versatile and modular toolset designed to enhance the functionality of your Unity projects by
+providing a curated collection of utilities, extensions, and tools. Focused on reliability, performance, and ease of
+use, this package aims to simplify common development tasks and improve code quality across various game development
+scenarios.
 
-
+---
 
 ## Table of Contents
 
-- [Core Tool Kit](#core-tool-kit)
-  - [Table of Contents](#table-of-contents)
-  - [Installation](#installation)
-    - [Unity Package Manager](#unity-package-manager)
-  - [Features](#features)
-  - [Usage](#usage)
-    - [Example](#example)
-  - [Documentation](#documentation)
-  - [Contributing](#contributing)
-  - [License](#license)
+<!-- TOC -->
+* [Core Tool Kit](#core-tool-kit)
+  * [Table of Contents](#table-of-contents)
+  * [Import the Package](#import-the-package)
+    * [Unity Package Manager](#unity-package-manager)
+      * [Current `main` version](#current-main-version)
+      * [Releases](#releases)
+    * [Package Dependencies](#package-dependencies)
+      * [TextMeshPro](#textmeshpro)
+      * [DoTween](#dotween)
+  * [Modules](#modules)
+  * [Tests](#tests)
+  * [Documentation](#documentation)
+  * [Contributing](#contributing)
+  * [License](#license)
+<!-- TOC -->
 
-## Installation
+---
+
+## Import the Package
 
 ### Unity Package Manager
 
-Add the package by Git URL:
+#### Current `main` version
+
+To import the current version from `main` branch, add the package using the next Git URL:
 ```
 https://github.com/Palanx/core-tool-kit.git?path=/Packages/net.palanx.core-tool-kit
 ```
 
-## Features
+#### Releases
 
-- **Utilities**: A collection of commonly used functions to simplify complex tasks.
-- **Extensions**: Extend the capabilities of existing classes, adding new methods and functionality.
-- **Tools**: Various standalone tools to aid in project development and debugging.
-- **Modular Design**: Easily include only the components you need.
+For now there aren't release versions.
 
-## Usage
+### Package Dependencies
 
-After installing the Core Tool Kit, you can start using it in your project by importing the necessary components:
+This package has the next dependencies:
 
-```csharp
-using CoreToolKit.Utilities;
-using CoreToolKit.Extensions;
+- TextMeshPro
+- DoTween
+
+So they must be imported in the project where this package was imported:
+
+#### TextMeshPro
+
+1. Go to the toolbar and press `Edit -> Project Settings...`.
+2. In the `TextMeshPro` tab, press the `Import TMP Essentials`.
+3. Done.
+
+#### DoTween
+
+1. Open this [DoTween Package URL](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676), and
+add it to your Unity account, in the case you don't have the
+[DoTweenPro](https://assetstore.unity.com/packages/tools/visual-scripting/dotween-pro-32416) version, if you have the
+Pro version, use it instead of the standard version.
+2. Go to the toolbar and press `Windows -> Package Manager`.
+3. In the `My Assets` section look for the *DOTween* package, or *DoTweenPro* if you bought it, and import it into the
+project.
+4. A modal will appears, press the `Setup DoTween...` button to config the package that you already installed.
+5. Done.
+
+---
+
+## Modules
+
+``` 
+Modules/
+│
+├── Logger/
+│   ├── LogManager // Manager that handles Logger instances for specific types.
+│   └── Logger // Logger for a specific type.
+│
+├── NET_System/
+│   ├── Delegate/
+│   │   └── Extensions/
+│   │       └──DelegateExtensions // Method extensions for delegates.
+│   └── Threading/
+│       └── Extensions/
+│           └──TaskExtensions // Method extensions for Task.
+│
+├── TextMeshPro/
+│   └── Extensions/
+│       └── TMP_TextExtensions // Method extensions for TMP_Text.
+│
+└──UnityEngine/
+   ├── Attributes/
+   │   └── ReadOnlyInspectorAttribute // Attribute to make readonly a serialized field in the Inspector.
+   ├── Extensions/
+   │   ├── RectExtensions // Method extensions for Rect.
+   │   ├── RectTransformExtensions // Method extensions for RectTransform. Transformations to (World <──> Screen) Space included.
+   │   └── VectorExtensions // // Method extensions for Vector2 and Vector3.
+   ├── Scheduler/
+   │   └── UnityTaskRunner // Provides a mechanism to schedule threads against Unity's UnitySynchronizationContext.
+   └── UI/
+       ├── TypewriterEffect // Component that display text in a TMPro.TMP_Text component.
+       └── Utils/
+           └── DisplayFormatUtils // Utils class to format values.
 ```
 
-### Example
+---
 
-Here is a simple example demonstrating how to use one of the utility methods:
+## Tests
 
-```csharp
-var result = StringUtilities.Reverse("Hello World!");
-Console.WriteLine(result); // Output: !dlroW olleH
-```
+Under the path `\Assets\Tests\` you'll find the `EditorMode` and `PlayMode`, those folders have the test for the
+previous listed `Modules`, using the same folder structure.
 
-> Feel free to explore the `Examples` directory in the repository for more use cases and practical applications.
+> [!IMPORTANT]
+> The `PlayMode` tests aren't already made because I don't feel like doing it for now, I have no time and something
+> that I really hate to do is `PlayMode` tests 🫠 BUT! some day I'll include them.
+
+---
 
 ## Documentation
 
-Comprehensive documentation is available [here](https://github.com/Palanx/core-tool-kit/wiki) or can be generated using [DocFX](https://dotnet.github.io/docfx/) if included in the repository. The documentation provides detailed information about each feature, method, and tool provided by the Core Tool Kit.
+There isn't documentation, each module is self explained and easy to use for a developer with C# experience.
+
+---
 
 ## Contributing
 
-We welcome contributions from the community! Here's how you can get involved:
+I welcome contributions from the community! Here's how you can get involved:
 
 1. Fork the repository
 2. Create a new branch (`git checkout -b feature/YourFeature`)
@@ -72,7 +142,11 @@ We welcome contributions from the community! Here's how you can get involved:
 4. Push to the branch (`git push origin feature/YourFeature`)
 5. Create a new Pull Request
 
-Please ensure all contributions adhere to our [Code of Conduct](https://github.com/Palanx/core-tool-kit/blob/main/CODE_OF_CONDUCT.md) and follow the [Contribution Guidelines](https://github.com/Palanx/core-tool-kit/blob/main/CONTRIBUTING.md).
+It is very likely that it does not merge third-party PRs, because I always filter that all code written follows the
+same line as the package, and it is very common that game developers write bad code, but come up with very good ideas,
+so I almost always take that idea and refactor it.
+
+---
 
 ## License
 
